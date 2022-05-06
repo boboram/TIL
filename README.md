@@ -8,3 +8,6 @@
 
 ## Redis
 - [자료-레디스야무지게사용하기](https://github.com/boboram/TIL/blob/main/Redis/%EC%9E%90%EB%A3%8C-%EB%A0%88%EB%94%94%EC%8A%A4%EC%95%BC%EB%AC%B4%EC%A7%80%EA%B2%8C%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md)
+
+## JAVA
+- [이펙티브-자바-정리](https://github.com/boboram/TIL/blob/main/JAVA/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C-%EC%9E%90%EB%B0%94.md)
