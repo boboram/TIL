@@ -6,3 +6,5 @@
 #### #5. 람다로 프로그래밍 ([보람블로그](https://velog.io/@bona/Kotlin-In-Action-5.-%EB%9E%8C%EB%8B%A4%EB%A1%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))
 
 #### #6. 코틀린 타입 시스템 ([보람블로그](https://velog.io/@bona/Kotlin-In-Action-6))
+
+#### #7. 연산자 오버로딩과 기타 관례 ([보람블로그](https://velog.io/@bona/Kotlin-In-Action-7))
