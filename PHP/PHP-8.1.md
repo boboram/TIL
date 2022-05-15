@@ -23,8 +23,10 @@ public function testStatusValue()
 
 ## 읽기 전용 속성
 - **readonly 속성은 초기화 후 변경 불가능**, 데이터 전송 객체를 모델링할 때 좋은 방법임
+
 ### 사용 
 <img width="773" alt="image" src="https://user-images.githubusercontent.com/14108487/168474352-6c38d2ae-4408-47db-b639-9c237588c620.png">
+
 ### 실제 코드
 
 ```
