@@ -66,7 +66,7 @@ function count_and_iterate(Iterator&Countable $value) {
 - A|B : A, B 둘 중 하나만 충족하는 타입이여도 요청 가능 
 
 ## Never 타입
-- never 로 선언된 함수 또는 메서드는 **값을 반환하지 않으며 예외를 발생시키거나** 아래 함수들의 호출로 프로그램을 종료한다.
+- never 로 선언된 함수 또는 메서드는 **값을 반환하지 않으며 예외를 발생시키거나** 아래 함수들의 호출로 프로그램을 종료한다. (코틀린의 **Nothing**과 비슷한 듯)
 - trigger_error() : 사용자 지정 오류, 사용자 수준의 오류를 반환 
 - die() : 프로그램 종료(exit과 동일)
 - exit()
