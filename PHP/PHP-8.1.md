@@ -100,5 +100,23 @@ class Bar extends Foo
 }
 ```
 
+## Array unpacking support for string-keyed arrays (문자열 키 배열에 대한 배열 압축 해제 지원)
+- 이전 버전에서는 확장 연산자(array_merge)를 통해 내부 배열의 압축을 풀었지만 문자열 키(...)로도 배열을 풀 수 있음
+```
+function testUnpackingMerge():void {
+    $arrayA = ['a' => 1];
+    $arrayB = ['b' => 2];
+
+    //php 8.1 이전 버전에서는 array_merge를 사용해서 배열 머지했어야 함
+    $result = array_merge(['a' => 0], $arrayA, $arrayB); // ['a' => 1, 'b' => 2]
+
+    $this->assertEquals(['a' => 1, 'b' => 2], $result); //true 
+
+    //array_merge 말고 ...으로 배열 붙이면 머지 가능! 
+    $result2 = ['a' => 0, ...$arrayA, ...$arrayB]; //['a' => 1, 'b' => 2]
+
+    $this->assertEquals(['a' => 1, 'b' => 2], $result2); //true 
+}
+```
 
 ## 계속 추가 예정..
