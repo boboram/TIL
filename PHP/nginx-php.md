@@ -19,3 +19,7 @@ php -v
 <img width="634" alt="image" src="https://user-images.githubusercontent.com/14108487/176100675-6d1db938-7706-464e-8570-2246ba6830e9.png">
 
 회사에서는 aws ec2, cdg 기반으로 배포를 하고 있기 때문에 해당 ec2 복사본을 기반으로 ami 생성 -> lc 생성 -> asg에 새로 생성한 lc로 교체하여 기존 코드로 재배포 해줬다.
+
+## update-alternatives 이란?
+- 해당 언어에 대해서 여러가지 버전이 존재하는 경우, 원하는 버전으로 실행하고자 할 때 사용 가능
+- 사용 방법은 위에 참고하기 
