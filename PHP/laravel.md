@@ -9,8 +9,8 @@
 아래 명령어를 사용하여 폴더 생성및 권한을 추가했고 다시 optimize:clear 명령어를 쳐보니 문제없이 동작된다. : ) 
 
 ```
-sudo mkdir -p /app/gbike-labs-admin/current/storage/framework/cache/data
-sudo chown -R 사용자:www-data /app/gbike-labs-admin/current/storage/framework/cache/data
+sudo mkdir -p /프로젝트경로/storage/framework/cache/data
+sudo chown -R 사용자:www-data /프로젝트경로/storage/framework/cache/data
 ```
 
 ## 사용자:www-data로 권한을 준 이유는?
