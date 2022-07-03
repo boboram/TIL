@@ -5,3 +5,4 @@
 #### #3. 툴바 메뉴 추가하기(Action, plugin.xml) ([보람블로그](https://velog.io/@bona/PHPStorm-Plugin-%EA%B0%9C%EB%B0%9C-3.-%ED%88%B4%EB%B0%94-%EB%A9%94%EB%89%B4-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0Action-plugin.xml))
 #### #4. 플러그인 서명 & 빌드하기 ([보람블로그](https://velog.io/@bona/PHPStorm-Plugin-%EA%B0%9C%EB%B0%9C-4.-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%9C%EB%AA%85-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0))
 #### #5. 플러그인 출시하기 ([보람블로그](https://velog.io/@bona/PHPStorm-Plugin-%EA%B0%9C%EB%B0%9C-5.-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%B6%9C%EC%8B%9C%ED%95%98%EA%B8%B0))
+#### #6. Trouble-Shooting ([보람블로그](https://velog.io/@bona/PHPStorm-Plugin-%EA%B0%9C%EB%B0%9C-6.-trouble-shooting))
