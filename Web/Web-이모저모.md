@@ -11,3 +11,10 @@
 
 ## 관련 SW
 - 파이썬이 해당 분야의 선두주자이며, Java도 크롤링을 할 수 있는 라이브러리가 존재한다.
+
+## 실습
+- 스프링부트&코틀린에서 Jsoup 라이브러리를 사용하여 네이버 쇼핑 스콘 랭킹 5 정보를 얻어왔다! 
+- 해당 url에 해당하는 html을 얻어온 후 원하는 element에 해당하는 정보를 가져오면 끝! : )
+- 코드: [깃허브링크](https://github.com/boboram/try-kopring/blob/main/src/main/kotlin/com/boram/trykopring/web/SconeCrawlingController.kt)
+- 결과 이미지
+<img width="650" alt="image" src="https://user-images.githubusercontent.com/14108487/177162124-982af0c8-a2cb-4656-a55d-5678dfe4016e.png">
