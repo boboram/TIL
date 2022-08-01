@@ -28,3 +28,6 @@
 
 ## Clean-Code
 - [Clean-Code](https://github.com/boboram/TIL/tree/main/%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C)
+
+## 리팩터링
+- [리팩터링-2판](https://github.com/boboram/TIL/tree/main/%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)
