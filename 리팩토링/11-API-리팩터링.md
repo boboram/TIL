@@ -65,3 +65,55 @@ function setWidth (value) {this._width = value;}
 - 절차
   - 매개변수로 주어질 수 있는 값 각각에 대응하는 명시적 함수들을 생성한다.
   - 원래 함수를 호출하는 코드들을 모두 찾아서 각 리터럴 값에 대응되는 명시적 함수를 호출하도록 수정한다. 
+
+## 객체 통째로 넘기기 427 ~ 432 page
+```
+const low = aRoom.daysTempRange.low;
+const high = aRoom.daysTempRange.high;
+if (aPlan.withinRange(low, high))
+```
+
+```
+if (aPlan.withinRange(aRoom.daysTempRange))
+```
+- 다른 객체의 메서드를 호출하면서 호출하는 객체 자신이 가지고 있는 데이터 여러 개는 건데는 경우 
+
+## 매개변수를 질의 함수로 바꾸기 433 ~ 436 page
+```
+availableVacation(anEmployee, anEmployee.grade);
+
+function availableVacation(anEmployee, grade) {
+  //연휴 계산...
+```
+를
+```
+availableVacation(anEmployee)
+
+function availableVacation(anEmployee) {
+  const grade = anEmployee.grade;
+  //연휴 계산...
+```
+로 바꾸기 
+
+- 매개변수 목록은 함수의 변동 요인을 모아놓은 곳이다. 
+- 피호출 함수가 **스스로 쉽게 결정할 수 있는 값을 매개변수로 건네는 것도 일종의 중복**이다. 
+  - 질의함수로 대체한 후 매개변수를 제거한다. 
+- 대상 함수가 참조 투명해야 한다. (참조 투명 : 함수에 똑같은 값을 건네 호출하면 항상 똑같이 동작한다.) 
+
+## 질의 함수를 매개변수로 바꾸기 437 ~ 441 page
+```
+targetTemperature(aPlan)
+
+function targetTemperature(aPlan) {
+  currentTemperature = thermostat.currentTemperature;
+  //생략
+```
+
+```
+targetTemperature(aPlan, thermostat.currentTemperature)
+
+function targetTemperature(aPlan, currentTemperature) {
+  //생략
+```
+- 전역 변수를 참조한다거나 같은 모듈에 안에서라도 제거하길 원하는 원소를 참조하는 경우라면 해당 참조를 매개변수로 바꿔 해결 할 수 있다. 
+
