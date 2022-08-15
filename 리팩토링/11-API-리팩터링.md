@@ -115,5 +115,5 @@ targetTemperature(aPlan, thermostat.currentTemperature)
 function targetTemperature(aPlan, currentTemperature) {
   //생략
 ```
-- 전역 변수를 참조한다거나 같은 모듈에 안에서라도 제거하길 원하는 원소를 참조하는 경우라면 해당 참조를 매개변수로 바꿔 해결 할 수 있다. 
+- 전역 변수를 참조한다거나 같은 모듈 안에서라도 제거하길 원하는 원소를 참조하는 경우라면 해당 참조를 매개변수로 바꿔 해결 할 수 있다. 
 - 참조 투명하지 않은 원소에 접근하는 모든 함수는 참조 투명성을 잃게 되는데, 이 문제는 해당 원소를 매개변수로 바꾸면 해결된다. 
