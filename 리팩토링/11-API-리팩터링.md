@@ -117,3 +117,66 @@ function targetTemperature(aPlan, currentTemperature) {
 ```
 - 전역 변수를 참조한다거나 같은 모듈 안에서라도 제거하길 원하는 원소를 참조하는 경우라면 해당 참조를 매개변수로 바꿔 해결 할 수 있다. 
 - 참조 투명하지 않은 원소에 접근하는 모든 함수는 참조 투명성을 잃게 되는데, 이 문제는 해당 원소를 매개변수로 바꾸면 해결된다. 
+
+## 세터 제거하기 442 ~ 444 page
+```
+class Person {
+  get name() {...}
+  set name(aString) {...}
+```
+
+```
+class Person {
+  get name() {...}
+
+```
+
+- 세터 메서드는 필드가 수정될 수 있다는 뜻이다. 
+- 객체 생성 후에는 수정되지 않길 원하는 필드라면 세터를 제공하지 않았을 것이다. 
+- 세터 제거하기가 필요한 상황
+  - 사람들이 무조건 접근자 메서드를 통해서만 필드를 다루려 하는 경우 
+  - 클라이언트에서 생성 스크립트를 사용해 객체를 생성하는 경우
+
+## 생성자를 팩터리 함수로 바꾸기 445 ~ 447 page
+```
+leadEngineer = new Employee(document.loadEngineer, 'E');
+```
+
+```
+leadEngineer = createEngineer(document.leadEngineer);
+
+function createEngineer(name) {
+  return new Employee(name, 'E');
+}
+```
+
+- 생성자 제약 : 자바 생성자는 반드시 그 생성자를 정의한 클래스의 인스턴스를 반환해야 한다. 생성자의 이름도 고정되어, 기본 이름보다 더 적절한 이름이 있어도 사용할 수 없다.
+- 팩터리 함수에는 이러한 제약이 없다. 
+
+## 함수를 명령으로 바꾸기 448 ~ 455 page
+```
+function score(candidate, medicalExam, scoringGuide) {
+  let result = 0;
+  let healthLevel = 0;
+  //긴 코드 생략
+}
+```
+
+```
+class Scorer {
+  constructor(candidate, medicalExam, scoringGuide) {
+    this._candidate = candidate;
+    this._medicalExam = medicalExam;
+    this._scoringGuide = scoringGuide;
+  }
+  
+  execute() {
+    this._result = 0;
+    this._healthLevel = 0;
+    //긴 코드 생략
+  }
+}
+```
+
+- 함수를 그 함수만을 위한 객체 안으로 캡슐화하면 더 유용해지는 상황이 있다. -> **명령 객체**
+  - 메서드 하나로 구성되며, 이 메서드를 요청해 실행하는 것이 이 객체의 목적이다. \
