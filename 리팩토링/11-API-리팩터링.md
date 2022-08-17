@@ -181,3 +181,93 @@ class Scorer {
 - 함수를 그 함수만을 위한 객체 안으로 캡슐화하면 더 유용해지는 상황이 있다. -> **명령 객체**
   - 메서드 하나로 구성되며, 이 메서드를 요청해 실행하는 것이 이 객체의 목적이다. 
   - 복잡한 함수를 잘게 쪼개서 이해하거나 수정하기 쉽게 만들고자 할 때 
+
+## 명령을 함수로 바꾸기 456 ~ 460
+```
+class ChargeCalculator {
+  constructor(customer, usage) {
+    this._customer = customer;
+    this._usage = usage;
+  }
+  
+  execute() {
+    return this._customer.rate * this._usage;
+  }
+}
+```
+
+```
+function charge(customer, usage) {
+  return customer.rate * usage;
+}
+```
+- 명령 객체는 복잡한 연산을 다룰 수 있는 강력한 매커니즘을 제공한다. 
+- 로직이 크게 복잡하지 않다면 명령 객체는 장점보다 단점이 크니 평범한 함수로 바꿔주는 게 낫다.  
+
+## 수정된 값 반환하기 461 ~ 464 page 
+```
+let toalAscent = 0;
+calculateAscent();
+
+function calculateAscent() {
+  for (let i = 1; i < points.length; i++) {
+    const verticalChange = points[i].elevation - points[i-1].elevation;
+    totalAscent += (verticalChange > 0) ? verticalChange : 0;
+  }
+}
+```
+
+```
+const totalAscent = calculateAscent();
+
+function calculateAscent() {
+  let result = 0;
+  for (let i = 1; i < points.length; i++) {
+    const verticalChange = points[i].elevation - points[i-1].elevation;
+    result += (verticalChange > 0) ? verticalChange : 0;
+  }
+  
+  return result;
+}
+```
+- 데이터가 어떻게 수정되는지를 추적하는 일은 코드에서 이해하기 가장 어려운 부분 중 하나다. 
+- 데이터가 수정된다면 그 사실을 명확히 알려주어서, 어느 함수가 무슨 일을 하는지 쉽게 알 수 있게 하는 일이 대단히 중요하다.
+- 수정된 값을 반환하여 호출자가 그 값을 변수에 담아두도록 하는 것이 데이터가 수정됨을 알려주는 좋은 방법이다. 
+  - 호출자 코드를 읽을 때 변수가 갱신될 것임을 분명히 인지하게 된다. 
+- 값 하나를 계산한다는 분명한 목적이 있는 함수들에 가장 효과적이고, 반대로 값 여러 개를 갱신하는 함수에는 효과적이지 않다. 
+ 
+## 오류 코드를 예외로 바꾸기 465 ~ 470 page 
+```
+if (data)
+  return new ShippingRules(data);
+else
+  return -23;
+```
+
+```
+if (data)
+  return new ShippingRules(data);
+else
+  return new OrderProcessingError(-23);
+```
+
+- 예외를 사용하면 오류코드를 일일이 검사하거나 오류를 식별해 콜스택 위로 던지는 일을 **신경 쓰지 않아도 된다**. 
+- 정상 동작 범주에 들지 않는 오류를 나타낼 때만 쓰여야 한다. 
+ 
+## 예외를 사전확인으로 바꾸기 471 ~ 474 page 
+```
+double getValueForPeriod (int periodNumber) {
+  try {
+    return values[periodNumber];
+  } catch (ArrayIndexOutOfBoundsException e) {
+    return 0;
+  }
+}
+```
+
+```
+double getValueForPeriod (int periodNumber) {
+  return periodNumber >= values.length) ? 0 : values[periodNumber];
+}
+```
+- 함수 수행 시 문제가 될 수 있는 조건을 함수 호출 전에 검사할 수 있다면, 예외를 던지는 대신 호출하는 곳에서 조건을 검사하도록 해야 한다.  
