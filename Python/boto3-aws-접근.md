@@ -5,21 +5,26 @@
 ```
 paths = [ "file path" ] 
 
-try:
-    response = cf.create_invalidation(
-        DistributionId="클라우드프론트아이디",
-        InvalidationBatch={
-            'Paths': {
-                'Quantity': len(paths),
-                'Items': paths
-            },
-            'CallerReference': str(time.time()).replace(".", "")
-        }
-    )
-    return True
-except:
+create_invalidation(paths)
 
-    return False
+def create_invalidation(paths, distribution_id=os.environ.get('DISTRIBUTION_ID')):
+    cf = boto3.client('cloudfront')
+
+    try:
+        response = cf.create_invalidation(
+            DistributionId=distribution_id,
+            InvalidationBatch={
+                'Paths': {
+                    'Quantity': len(paths),
+                    'Items': paths
+                },
+                'CallerReference': str(time.time()).replace(".", "")
+            }
+        )
+        return True
+    except:
+
+        return False
 ```
 - 옵션 
   - `DistributionId` : 클라우드프론트 고유아이디 
