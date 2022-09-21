@@ -23,6 +23,7 @@
 - 데이터가 많으면서 해당 데이터들의 연관관계가 항상 쓰이지 않는 프로젝트라면 LAZY 로딩 사용을 권장하고 있다. 
 
 # 라라벨 프로젝트 생성 후 권한 설정
+```
 composer create-project laravel/laravel 프로젝트명 —prefer-dist
 
 mkdir -p ./storage/framework/{sessions,views,cache}
@@ -32,3 +33,4 @@ mkdir -p ./bootstrap/cache
 cd storage/
 mkdir -p framework/{sessions,views,cache}
 chmod -R 775 framework
+```
