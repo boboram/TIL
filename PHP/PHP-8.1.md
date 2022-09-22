@@ -120,3 +120,8 @@ function testUnpackingMerge():void {
 ```
 
 ## 계속 추가 예정..
+
+### PHP8.1 에서 jwt-auth 사용하고자 할때 
+```
+composer require tymon/jwt-auth:dev-develop
+```
