@@ -21,4 +21,4 @@
 - 사용 예시
   - 채팅 봇 
 
-## [serverless 로컬에 설치 및 프로젝트 생성]()
+## [serverless 로컬에 설치 및 프로젝트 생성](https://github.com/boboram/TIL/blob/main/AWS/serverless/%EB%A1%9C%EC%BB%AC-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC.md)
