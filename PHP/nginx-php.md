@@ -7,3 +7,11 @@ sudo nginx -t
 ```
 - restart : `sudo service nginx restart`
 
+# codedeploy-agent 관련 명령어
+```
+sudo service codedeploy-agent status
+sudo service codedeploy-agent start
+sudo service codedeploy-agent stop
+sudo service codedeploy-agent restart
+```
+- 로그 확인 : `tail /var/log/aws/codedeploy-agent/codedeploy-agent.log`
