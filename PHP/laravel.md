@@ -34,3 +34,9 @@ cd storage/
 mkdir -p framework/{sessions,views,cache}
 chmod -R 775 framework
 ```
+
+## ide-helper
+```
+composer install barryvdh/laravel-ide-helper:^2.12
+php artisan ide-helper:Models
+```
