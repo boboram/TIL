@@ -33,3 +33,5 @@ memory_limit 찾은 후에 수정 후 저장(wq!)
 ```
 sudo service php7.4-fpm restart
 ```
+
+### [CodeDeploy - UnknownError](https://velog.io/@bona/Trouble-Shooting-CodeDeploy-UnknownError)
