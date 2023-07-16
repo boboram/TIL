@@ -76,7 +76,7 @@
     - 정보의 오류와 흐름 관리 / 프레임 / 스위치, 브리지 
 - 네트워크계층, Network Layer
     - 라우팅(데이터를 목적지까지 가장 안전하고 빠르게 전달), 패킷, 라우터
-- 전송계층, Transmission Layer
+- 전송계층, Transport Layer
     - 흐름제어, 오류 복구 
     - TCP/UDP
 #### 데이터를 주고 받을 때 각 계층마다 하나씩 헤더가 붙는다.
@@ -92,3 +92,6 @@
 - IPX (Internetwork Packet eXchange) : 같은 공간의 사람들과 통신하기 위함
 - PC방을 예로 들면 같은 공간의 친구들끼리는 IPX를 다른 공간의 사람들과 게임하기 위해선 TCP/IP를 사용, PC방에선 2개의 프로토콜을 사용한다.
 - AppleTalk : 매킨토시(Mac) 사용자들끼리 통신하기 위함 
+
+## Velog 
+- 링크 : (https://velog.io/@bona/cisco-network-v1-part-02)
