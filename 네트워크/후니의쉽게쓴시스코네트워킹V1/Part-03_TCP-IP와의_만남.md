@@ -31,3 +31,6 @@
 - 논리적 망분리 : 실제론 하나의 망을 사용하지만 두개를 쓰는 것처럼 사용
     - CBC(Client Based Computing) 방식 : PC기반(클라이언트) 가상화 
     - SBC(Server Based Computing) 방식 : 서버 기반 가상화 
+
+## VELOG
+- 링크 : (https://velog.io/@bona/cisco-network-v1-part-03)
