@@ -88,3 +88,6 @@
 - 보안 기능 : 패킷을 필터링함
 - 로드 분배
 - QoS(Quality of Service) : 트래픽 전송 순서 조정 
+
+# velog
+- 링크 : https://velog.io/@bona/cisco-network-v1-part-04
